@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pagina 3</title>
+  <style>
+      canvas{
+          border: 3px solid brown;
+          background-color: white;
+          text-align: center;
+      }
+  </style>
+<script>
+  window.onload=function(){
+    var canvas = document.getElementById("micanvas");
+    var context = canvas.getContext("2d");
+    context.fillStyle = "rgba(155,286,67,.5)";
+    context.fillRect(10,10,500,500);
+    context.fillStyle = "rgba(252,186,3,.5)";
+    context.fillRect(10,10,400,400);
+    context.fillStyle = "rgba(252,3,236,.5)";
+    context.fillRect(10,10,300,300);
+    context.fillStyle = "rgba(3,98,252,.5)";
+    context.fillRect(10,10,200,200);
+    context.fillStyle = "rgba(115,3,252,.5)";
+    context.fillRect(10,10,100,100); 
+  }
+</script>
+
+  </head>
+<body>
+   <canvas id="micanvas" width="800" height="600"></canvas>
+</body>
+</html>
