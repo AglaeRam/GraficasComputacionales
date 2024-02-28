@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A6 - Animación rotación al mouse</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body{
+        text-align: center;
+      }
+      canvas{
+          text-align: center;
+          border: 4px solid white;
+          background-color: black;
+      }
+      h1{
+            text-align: center;
+            background-color:ghostwhite;
+            font-size: xx-large;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+        }
+  </style>
+  </head>
+  <body>
+    
+    <h1>Move mouse on canvas element</h1>
+
+    <canvas id="canvas" width="1000" height="600"></canvas>
+    <script src="utils.js"></script>
+    
+    <script>
+    window.onload = function () {
+      var canvas = document.getElementById('canvas'),
+          context = canvas.getContext('2d'),
+          mouse = utils.captureMouse(canvas),
+
+          gato = new Image();
+          gato.src = "gato.png";
+
+          fondo = new Image();
+          fondo.src = "fondo.jpg";
+        
+          ;
+
+      (function drawFrame () {
+        window.requestAnimationFrame(drawFrame, canvas);
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.drawImage(fondo, 0, 0, canvas.width, canvas.height);
+        context.save();
+        
+        var x = canvas.width/2; 
+        var y = canvas.height/2;
+        context.translate(x, y);
+        var dx = mouse.x - x, 
+            dy = mouse.y - y;
+        var radianes = Math.atan2(dy, dx); 
+        console.log(radianes);
+        context.rotate(radianes); 
+
+        context.drawImage(gato, -gato.width/2, -gato.height/2);
+        
+        context.restore();
+
+      }());
+    };
+    </script>
+  </body>
+</html>
