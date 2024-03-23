@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Figuras en canva </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body{
+        text-align: center;
+      }
+      h1{
+        text-align: center;
+        font-size: xx-large;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color:rgb(176, 70, 87);
+
+      }
+      canvas{
+        border: 3px solid rgb(176, 70, 87);
+        background-color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Figuras en canvas</h1>
+    <canvas id="canvas" width="800" height="230"></canvas>    
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById('canvas'),
+                context = canvas.getContext('2d');
+                context. save();
+
+                //Casita
+                context.fillStyle = "rgb(187, 93, 108)";
+                context.beginPath();
+                context.moveTo(50,100);
+                context.lineTo(100,50);
+                context.lineTo(150,100);
+                context.closePath();
+                context.fill();
+                context.restore();
+                context.save();
+                context.fillStyle = "rgb(221, 211, 188)";
+                context.beginPath();
+                context.moveTo(70,100);
+                context.lineTo(70,150);
+                context.lineTo(130,150);
+                context.lineTo(130,100);
+                context.fill();
+                context.restore();
+                context.save();
+                context.fillStyle = "pink";
+                context.beginPath();
+                context.moveTo(90,150);
+                context.lineTo(110,150);
+                context.lineTo(110,125);
+                context.lineTo(90,125);
+                context.closePath();
+                context.fill();
+                context.restore();
+                context.save();
+                context.fillStyle = "rgb(218, 158, 168)";
+                context.beginPath();
+                context.moveTo(90,150);
+                context.lineTo(90,125);
+                context.lineTo(105,125);
+                context.quadraticCurveTo(100, 125, 90, 150);
+                context.fill();
+                context.restore();
+                context.save();
+                context.fillStyle = "rgb(206, 195, 168)";
+                context.beginPath();
+                context.moveTo(70,150);
+                context.lineTo(70,100);
+                context.lineTo(120,100);
+                context.quadraticCurveTo(80, 100, 70, 150);
+                context.fill();
+                context.restore();
+                context.save();
+                context.fillStyle = "white";
+                context.beginPath();
+                context.arc(105, 140, 2, 0, 2 * Math.PI);
+                context.fill();
+                context.restore();
+
+                //Honguito
+                context.save();
+                context.fillStyle = "red";
+                context.beginPath();
+                context.moveTo(200,100);
+                context.quadraticCurveTo(250, 20, 300, 100);
+                context.closePath();
+                context.fill();
+                context.restore();
+                context.save();
+                context.fillStyle = "rgb(208, 186, 151)";
+                context.beginPath();
+                context.moveTo(235,100);
+                context.lineTo(235,150);
+                context.lineTo(265,150);
+                context.lineTo(265,100);
+                context.fill();
+                context.restore();
+                context.save();
+                context.fillStyle = "rgb(174, 162, 134)";
+                context.beginPath();
+                context.moveTo(235,135);
+                context.lineTo(235,100);
+                context.lineTo(260,100);
+                context.quadraticCurveTo(240, 100, 235, 135);
+                context.fill();
+                context.restore();
+                context.save();
+                context.fillStyle = "white";
+                context.beginPath();
+                context.arc(225, 90, 4, 0, 2 * Math.PI);
+                context.arc(250, 90, 4, 0, 2 * Math.PI);
+                context.arc(275, 90, 4, 0, 2 * Math.PI);
+                context.fill();
+                context.beginPath();
+                context.arc(237, 75, 4, 0, 2 * Math.PI);
+                context.arc(262, 75, 4, 0, 2 * Math.PI);
+                context.fill();
+
+
+
+                //Estrella
+                context.save();
+                context.fillStyle = "rgb(233, 180, 45)";
+                context.beginPath();
+                context.moveTo(355,150);
+                context.lineTo(380,70);
+                context.lineTo(410,150);
+                context.lineTo(340,100);
+                context.lineTo(420,100);
+                context.lineTo(355,150);
+                context.fill();
+
+                //Luna
+                context.save();
+                context.fillStyle = "rgb(204, 196, 175)";
+                context.beginPath();
+                context.arc(505, 110, 50, 0, 2 * Math.PI);
+                context.fill();
+                context.restore();
+                context.save();
+                context.fillStyle = "rgb(218, 212, 196)";
+                context.beginPath();
+                context.arc(500, 110, 50, 0, 2 * Math.PI);
+                context.fill();
+                context.restore();
+                context.save();
+                context.fillStyle = "white";
+                context.beginPath();
+                context.arc(480, 110, 45, 0, 2 * Math.PI);
+                context.fill();
+                context.restore();
+
+                //Tele
+                context.save();
+                context.fillStyle = "rgb(46, 46, 46)";
+                context.beginPath();
+                context.moveTo(600,140);
+                context.lineTo(750,140);
+                context.lineTo(750,55);
+                context.lineTo(600,55);
+                context.closePath();
+                context.fill();
+                context.restore();
+                context.save();
+                context.fillStyle = "rgb(51, 59, 81)";
+                context.beginPath();
+                context.moveTo(610,130);
+                context.lineTo(740,130);
+                context.lineTo(740,65);
+                context.lineTo(610,65);
+                context.closePath();
+                context.fill();
+                context.restore();
+                context.save();
+                context.fillStyle = "rgb(62, 61, 61)";
+                context.beginPath();
+                context.moveTo(640,140);
+                context.lineTo(640,150);
+                context.lineTo(705,150);
+                context.lineTo(705,140);
+                context.closePath();
+                context.fill();
+                context.restore();
+                context.save();
+                context.fillStyle = "rgb(62, 70, 93)";
+                context.beginPath();
+                context.moveTo(610,130);
+                context.lineTo(610,65);
+                context.lineTo(660,65)
+                context.quadraticCurveTo(620, 90, 610, 130);
+                context.fill();
+
+
+
+
+
+
+
+
+                
+
+
+        }
+    </script>
+  </body>
+</html>
