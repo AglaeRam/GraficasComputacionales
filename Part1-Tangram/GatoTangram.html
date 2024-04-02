@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gato Tangram</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body{
+        text-align: center;
+      }
+      h1{
+        text-align: center;
+        font-size: xx-large;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+        color:rgb(176, 70, 87);
+
+      }
+      canvas{
+        border: 3px solid rgb(176, 70, 87);
+        background-color: white;
+        text-align: center; color: rgb(114, 207, 228);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gatito Tangram</h1>
+    <canvas id="canvas" width="600" height="400"></canvas>    
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById('canvas'),
+                context = canvas.getContext('2d');
+                context. save();
+
+                context.fillStyle = "rgb(23, 171, 38)";
+                context.beginPath();
+                context.moveTo(230,390);
+                context.lineTo(350,390);
+                context.lineTo(350,265);
+                context.closePath();
+                context.fill();
+                context.restore();
+                context.save();
+
+                context.fillStyle = "rgb(114, 207, 228)";
+                context.beginPath();
+                context.moveTo(350,265);
+                context.lineTo(280,190);
+                context.lineTo(280,340);
+                context.closePath();
+                context.fill();
+                context.restore();
+                context.save();
+
+                context.fillStyle = "rgb(232, 150, 27)";
+                context.beginPath();
+                context.moveTo(280,190);
+                context.lineTo(220,250);
+                context.lineTo(280,310);
+                context.closePath();
+                context.fill();
+                context.restore();
+                context.save();
+
+                context.fillStyle = "rgb(238, 190, 17)";
+                context.beginPath();
+                context.moveTo(240,150);
+                context.lineTo(200,190);
+                context.lineTo(240,230);
+                context.closePath();
+                context.fill();
+                context.beginPath();
+                context.moveTo(240,150);
+                context.lineTo(280,190);
+                context.lineTo(240,230);
+                context.closePath();
+                context.fill();
+                context.restore();
+                context.save();
+
+                context.fillStyle = "rgb(238, 35, 17)";
+                context.beginPath();
+                context.moveTo(280,110);
+                context.lineTo(240,150);
+                context.lineTo(280,190);
+                context.closePath();
+                context.fill();
+                context.restore();
+                context.save();
+
+                context.fillStyle = "rgb(27, 71, 232)";
+                context.beginPath();
+                context.moveTo(200,110);
+                context.lineTo(240,150);
+                context.lineTo(200,190);
+                context.closePath();
+                context.fill();
+                context.restore();
+                context.save();
+
+                context.fillStyle = "rgb(202, 163, 211)";
+                context.beginPath();
+                context.moveTo(350,390);
+                context.lineTo(440,390);
+                context.lineTo(470,340);
+                context.lineTo(380,340)
+                context.closePath();
+                context.fill();
+                context.restore();
+                context.save();
+
+
+                
+        }
+    </script>
+  </body>
+</html>
