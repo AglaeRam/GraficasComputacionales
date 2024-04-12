@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rotational Velocity</title>
+    <style>
+      body { 
+        text-align: center;
+        background-color: rgb(110, 185, 255);
+      }
+      canvas { 
+        background-image: url("cara.png");
+        background-repeat: no-repeat;
+        background-color: white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="700" height="700"></canvas>
+
+    <script src="utils.js"></script>
+    <script src="arrow.js"></script>
+    <script>
+    window.onload = function () {
+      var backgroundImage = new Image();
+          backgroundImage.src = "reloj.png"; 
+
+      var canvas = document.getElementById('canvas'),
+          context = canvas.getContext('2d'),
+          context2 = canvas.getContext('2d'),
+          context3 = canvas.getContext('2d'),
+
+          
+          //arrow = new Arrow(),
+          vr = .1; //degrees
+          vr2 = 1.2;
+          vr3 = 14.4;
+          var hora = new Image();
+          hora.src = "hora.png";
+          var min = new Image();
+          min.src = "min.png";
+          var seg = new Image();
+          seg.src = "Seg.png";
+          var radianes=0;
+          var radianes2=0;
+          var radianes3=0;
+
+          backgroundImage.onload = function ()
+          {
+            drawFrame();
+          };
+          
+
+      (function drawFrame () {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+        window.requestAnimationFrame(drawFrame, canvas);
+        context.save();
+    
+        context.translate(350, 350);
+        radianes += vr * Math.PI / 180; //to radians
+        context.rotate(radianes); //radians
+        context.drawImage(hora, -hora.width/2,-hora.height/2);
+        context.restore();
+
+        context2.save();
+
+        context2.translate(350, 350);
+        radianes2 += vr2 * Math.PI / 180; //to radians
+        context2.rotate(radianes2);
+        context2.drawImage(min, -min.width/2,-min.height/2);
+        context2.restore();
+
+        context3.save();
+
+        context3.translate(350, 350);
+        radianes3 += vr3 * Math.PI / 180; //to radians
+        context3.rotate(radianes3);
+        context3.drawImage(seg, -seg.width/2,-seg.height/2);
+        context3.restore();
+      
+      }());
+    };
+    </script>
+  </body>
+</html>
